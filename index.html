@@ -1,16 +1,585 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EntryGlobe PinApp</title>
-<link rel="stylesheet" href="style.css"></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EntryGlobe PinApp – Discover. Pin. Shop.</title>
+  <meta name="description" content="EntryGlobe PinApp is an AI-powered Pinterest content and product discovery platform. Browse curated collections, save ideas, and shop the looks you love." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
 <body>
-<header><div class="logo">EntryGlobe PinApp</div>
-<nav><a href="index.html">Home</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></nav></header>
-<section class="hero"><h1>Create Better Pinterest Content With AI</h1>
-<p>AI-powered Pinterest content management platform.</p></section>
-<section class="gallery">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200">
-<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1200">
+
+<!-- ── NAVBAR ── -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#E60023"/><path d="M16 6C10.477 6 6 10.477 6 16c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.207-5.115 1.207-5.115s-.308-.617-.308-1.53c0-1.434.832-2.507 1.866-2.507.88 0 1.306.66 1.306 1.452 0 .885-.564 2.209-.855 3.437-.243 1.028.515 1.863 1.527 1.863 1.832 0 3.244-1.931 3.244-4.716 0-2.466-1.771-4.19-4.3-4.19-2.927 0-4.645 2.195-4.645 4.465 0 .884.34 1.83.765 2.348a.307.307 0 0 1 .071.294c-.078.323-.252 1.027-.286 1.172-.046.19-.152.23-.35.138-1.3-.605-2.112-2.508-2.112-4.038 0-3.286 2.387-6.307 6.883-6.307 3.614 0 6.424 2.576 6.424 6.017 0 3.59-2.263 6.479-5.404 6.479-1.056 0-2.049-.549-2.39-1.197l-.65 2.425c-.235.904-.87 2.037-1.295 2.727.976.302 2.01.466 3.08.466 5.523 0 10-4.477 10-10S21.523 6 16 6z" fill="white"/></svg>
+      <span>EntryGlobe<strong>PinApp</strong></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="#products">Products</a>
+      <a href="#features">Features</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#get-started" class="btn-primary">Get Started Free</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="#products">Products</a>
+    <a href="#features">Features</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-badge">✨ Powered by Pinterest API</div>
+  <h1>Discover, Pin &amp; Shop<br /><span class="gradient-text">Products You'll Love</span></h1>
+  <p class="hero-sub">EntryGlobe PinApp connects your inspiration with the world's best products — curated, AI-ranked, and shoppable in one beautiful place.</p>
+  <div class="hero-cta">
+    <a href="#get-started" class="btn-primary btn-lg" id="get-started">Start Pinning Free</a>
+    <a href="#products" class="btn-ghost btn-lg">Browse Products</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><strong>2.4M+</strong><span>Products Pinned</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><strong>180K+</strong><span>Active Pinners</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><strong>4.9 ★</strong><span>User Rating</span></div>
+  </div>
 </section>
-<footer>entryglobe@gmail.com</footer>
-</body></html>
+
+<!-- ── FEATURES ── -->
+<section class="features-strip" id="features">
+  <div class="container">
+    <div class="section-label">Why EntryGlobe PinApp?</div>
+    <h2 class="section-title">Everything You Need to <span class="gradient-text">Pin Better</span></h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#fff0f0;">🎯</div>
+        <h3>AI-Curated Feed</h3>
+        <p>Our engine learns your taste and surfaces Pinterest products you'd never find scrolling alone.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#f0f4ff;">🛍️</div>
+        <h3>One-Click Shop</h3>
+        <p>Jump from inspiration to purchase instantly — no more tab-hopping to find the product.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#f0fff4;">📌</div>
+        <h3>Smart Boards</h3>
+        <p>Auto-organise pins into themed boards. Mood board for your bathroom reno? Done in seconds.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#fffbf0;">🔔</div>
+        <h3>Price Drop Alerts</h3>
+        <p>Pin it, forget it. We'll ping you the moment a pinned product goes on sale.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#f9f0ff;">📊</div>
+        <h3>Pin Analytics</h3>
+        <p>See which boards perform best and track engagement across your entire Pinterest presence.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#fff0f8;">🤝</div>
+        <h3>Collab Boards</h3>
+        <p>Invite friends and co-create boards together — perfect for weddings, projects, and teams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCTS GRID ── -->
+<section class="products-section" id="products">
+  <div class="container">
+    <div class="section-label">Trending Now</div>
+    <h2 class="section-title">Hot Products on <span class="gradient-text">EntryGlobe</span></h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="home">Home &amp; Living</button>
+      <button class="filter-btn" data-cat="fashion">Fashion</button>
+      <button class="filter-btn" data-cat="beauty">Beauty</button>
+      <button class="filter-btn" data-cat="food">Food &amp; Drink</button>
+      <button class="filter-btn" data-cat="tech">Tech</button>
+      <button class="filter-btn" data-cat="diy">DIY &amp; Crafts</button>
+      <button class="filter-btn" data-cat="travel">Travel</button>
+    </div>
+    <div class="masonry-grid" id="productGrid">
+
+      <!-- HOME & LIVING -->
+      <div class="pin-card" data-cat="home">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80" alt="Modern Sofa" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Home & Living</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Velvet Cloud Sectional Sofa</p>
+          <div class="pin-meta"><span class="pin-price">$1,299</span><span class="pin-saves">4.2k saves</span></div>
+        </div>
+      </div>
+
+      <div class="pin-card tall" data-cat="home">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=500&q=80" alt="Kitchen" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Home & Living</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Scandinavian Kitchen Makeover Kit</p>
+          <div class="pin-meta"><span class="pin-price">$349</span><span class="pin-saves">7.8k saves</span></div>
+        </div>
+      </div>
+
+      <!-- FASHION -->
+      <div class="pin-card" data-cat="fashion">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&q=80" alt="Outfit" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Fashion</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Boho Chic Summer Dress</p>
+          <div class="pin-meta"><span class="pin-price">$89</span><span class="pin-saves">12.1k saves</span></div>
+        </div>
+      </div>
+
+      <!-- BEAUTY -->
+      <div class="pin-card" data-cat="beauty">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?w=500&q=80" alt="Skincare" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Beauty</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Glass Skin Serum Trio</p>
+          <div class="pin-meta"><span class="pin-price">$74</span><span class="pin-saves">19.3k saves</span></div>
+        </div>
+      </div>
+
+      <!-- HOME -->
+      <div class="pin-card tall" data-cat="home">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1493421419110-74f4e85ba126?w=500&q=80" alt="Bedroom" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Home & Living</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Minimal Bedroom Set – Oak + Linen</p>
+          <div class="pin-meta"><span class="pin-price">$2,149</span><span class="pin-saves">8.5k saves</span></div>
+        </div>
+      </div>
+
+      <!-- TECH -->
+      <div class="pin-card" data-cat="tech">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Headphones" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Tech</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">ANC Studio Headphones Pro</p>
+          <div class="pin-meta"><span class="pin-price">$299</span><span class="pin-saves">22.4k saves</span></div>
+        </div>
+      </div>
+
+      <!-- FOOD -->
+      <div class="pin-card" data-cat="food">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&q=80" alt="Food" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Food & Drink</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Artisan Spice Collection (24 Jars)</p>
+          <div class="pin-meta"><span class="pin-price">$119</span><span class="pin-saves">6.7k saves</span></div>
+        </div>
+      </div>
+
+      <!-- DIY -->
+      <div class="pin-card tall" data-cat="diy">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=500&q=80" alt="DIY" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">DIY & Crafts</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Macramé Starter Workshop Bundle</p>
+          <div class="pin-meta"><span class="pin-price">$55</span><span class="pin-saves">31.2k saves</span></div>
+        </div>
+      </div>
+
+      <!-- FASHION -->
+      <div class="pin-card" data-cat="fashion">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&q=80" alt="Shoes" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Fashion</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Cloud-Sole Leather Sneakers</p>
+          <div class="pin-meta"><span class="pin-price">$185</span><span class="pin-saves">9.9k saves</span></div>
+        </div>
+      </div>
+
+      <!-- TRAVEL -->
+      <div class="pin-card" data-cat="travel">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=500&q=80" alt="Travel" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Travel</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Carry-On Hardshell Luggage Set</p>
+          <div class="pin-meta"><span class="pin-price">$249</span><span class="pin-saves">15.6k saves</span></div>
+        </div>
+      </div>
+
+      <!-- BEAUTY -->
+      <div class="pin-card tall" data-cat="beauty">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&q=80" alt="Makeup" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Beauty</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Velvet Matte Lip Vault (12 Shades)</p>
+          <div class="pin-meta"><span class="pin-price">$68</span><span class="pin-saves">28.1k saves</span></div>
+        </div>
+      </div>
+
+      <!-- HOME -->
+      <div class="pin-card" data-cat="home">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=500&q=80" alt="Lamp" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Home & Living</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Arc Floor Lamp – Brushed Gold</p>
+          <div class="pin-meta"><span class="pin-price">$179</span><span class="pin-saves">11.4k saves</span></div>
+        </div>
+      </div>
+
+      <!-- TECH -->
+      <div class="pin-card" data-cat="tech">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Watch" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Tech</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Minimalist Smart Watch Series X</p>
+          <div class="pin-meta"><span class="pin-price">$349</span><span class="pin-saves">33.7k saves</span></div>
+        </div>
+      </div>
+
+      <!-- FOOD -->
+      <div class="pin-card tall" data-cat="food">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80" alt="Food Plating" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Food & Drink</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Fine Dining Home Chef Kit</p>
+          <div class="pin-meta"><span class="pin-price">$229</span><span class="pin-saves">5.4k saves</span></div>
+        </div>
+      </div>
+
+      <!-- FASHION -->
+      <div class="pin-card" data-cat="fashion">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500&q=80" alt="Jacket" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Fashion</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Oversized Puffer Jacket – Sage</p>
+          <div class="pin-meta"><span class="pin-price">$145</span><span class="pin-saves">17.2k saves</span></div>
+        </div>
+      </div>
+
+      <!-- DIY -->
+      <div class="pin-card" data-cat="diy">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=500&q=80" alt="Candle" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">DIY & Crafts</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Soy Candle Making Starter Kit</p>
+          <div class="pin-meta"><span class="pin-price">$42</span><span class="pin-saves">24.8k saves</span></div>
+        </div>
+      </div>
+
+      <!-- TRAVEL -->
+      <div class="pin-card tall" data-cat="travel">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=500&q=80" alt="Travel Hammock" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Travel</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Ultralight Travel Hammock + Straps</p>
+          <div class="pin-meta"><span class="pin-price">$59</span><span class="pin-saves">13.0k saves</span></div>
+        </div>
+      </div>
+
+      <!-- HOME -->
+      <div class="pin-card" data-cat="home">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500&q=80" alt="Plants" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Home & Living</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Indoor Jungle Plant Bundle (5 Pots)</p>
+          <div class="pin-meta"><span class="pin-price">$95</span><span class="pin-saves">20.3k saves</span></div>
+        </div>
+      </div>
+
+      <!-- BEAUTY -->
+      <div class="pin-card" data-cat="beauty">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&q=80" alt="Perfume" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Beauty</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Niche Eau de Parfum Discovery Set</p>
+          <div class="pin-meta"><span class="pin-price">$129</span><span class="pin-saves">10.7k saves</span></div>
+        </div>
+      </div>
+
+      <!-- TECH -->
+      <div class="pin-card" data-cat="tech">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=500&q=80" alt="Keyboard" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Tech</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Wireless Mechanical Keyboard – Rose</p>
+          <div class="pin-meta"><span class="pin-price">$149</span><span class="pin-saves">25.9k saves</span></div>
+        </div>
+      </div>
+
+      <!-- FASHION -->
+      <div class="pin-card tall" data-cat="fashion">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&q=80" alt="Handbag" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Fashion</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Structured Top-Handle Tote – Caramel</p>
+          <div class="pin-meta"><span class="pin-price">$275</span><span class="pin-saves">41.0k saves</span></div>
+        </div>
+      </div>
+
+      <!-- DIY -->
+      <div class="pin-card" data-cat="diy">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1612965607446-25e1332775ae?w=500&q=80" alt="Pottery" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">DIY & Crafts</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Air-Dry Clay Pottery Kit</p>
+          <div class="pin-meta"><span class="pin-price">$37</span><span class="pin-saves">18.4k saves</span></div>
+        </div>
+      </div>
+
+      <!-- HOME -->
+      <div class="pin-card" data-cat="home">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?w=500&q=80" alt="Rug" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Home & Living</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Moroccan Berber Wool Area Rug 5×8</p>
+          <div class="pin-meta"><span class="pin-price">$389</span><span class="pin-saves">9.2k saves</span></div>
+        </div>
+      </div>
+
+      <!-- FOOD -->
+      <div class="pin-card" data-cat="food">
+        <div class="pin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=500&q=80" alt="Coffee" loading="lazy" />
+          <div class="pin-overlay"><button class="save-btn">📌 Save</button></div>
+          <span class="pin-badge">Food & Drink</span>
+        </div>
+        <div class="pin-info">
+          <p class="pin-title">Single-Origin Pour-Over Coffee Bundle</p>
+          <div class="pin-meta"><span class="pin-price">$64</span><span class="pin-saves">14.5k saves</span></div>
+        </div>
+      </div>
+
+    </div><!-- /masonry-grid -->
+    <div class="load-more-wrap">
+      <button class="btn-primary btn-lg" onclick="loadMore()">Load More Products</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="how-section">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Three Steps to Your <span class="gradient-text">Perfect Board</span></h2>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Connect Pinterest</h3>
+        <p>Link your Pinterest account securely via OAuth — no password stored, ever.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Browse &amp; Save</h3>
+        <p>Explore our curated product feed and pin anything you love to your boards.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>Shop &amp; Share</h3>
+        <p>Buy directly or share boards with friends. Set price alerts on saved items.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-label">Loved by Pinners</div>
+    <h2 class="section-title">What Our <span class="gradient-text">Community Says</span></h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"EntryGlobe PinApp completely changed how I shop. My boards are so organised and the price alerts saved me $300 last month!"</p>
+        <div class="testimonial-author"><img src="https://i.pravatar.cc/48?img=47" alt="Sarah" /><div><strong>Sarah M.</strong><span>Interior Designer</span></div></div>
+      </div>
+      <div class="testimonial-card featured">
+        <div class="stars">★★★★★</div>
+        <p>"The AI feed is genuinely uncanny. It found a $45 linen tote I'd been searching for for months. Bought it immediately."</p>
+        <div class="testimonial-author"><img src="https://i.pravatar.cc/48?img=32" alt="James" /><div><strong>James T.</strong><span>Fashion Blogger</span></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Collab boards with my clients is the best feature. We plan entire project mood boards in real time."</p>
+        <div class="testimonial-author"><img src="https://i.pravatar.cc/48?img=29" alt="Priya" /><div><strong>Priya K.</strong><span>UX Designer</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ── -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Start Pinning Smarter Today</h2>
+    <p>Join 180,000+ pinners discovering amazing products every day.</p>
+    <form class="cta-form" onsubmit="handleSignup(event)">
+      <input type="email" placeholder="Enter your email address" required />
+      <button type="submit" class="btn-primary">Get Free Access</button>
+    </form>
+    <p class="cta-fine">No credit card required. Free forever plan available.</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="brand">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#E60023"/><path d="M16 6C10.477 6 6 10.477 6 16c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.207-5.115 1.207-5.115s-.308-.617-.308-1.53c0-1.434.832-2.507 1.866-2.507.88 0 1.306.66 1.306 1.452 0 .885-.564 2.209-.855 3.437-.243 1.028.515 1.863 1.527 1.863 1.832 0 3.244-1.931 3.244-4.716 0-2.466-1.771-4.19-4.3-4.19-2.927 0-4.645 2.195-4.645 4.465 0 .884.34 1.83.765 2.348a.307.307 0 0 1 .071.294c-.078.323-.252 1.027-.286 1.172-.046.19-.152.23-.35.138-1.3-.605-2.112-2.508-2.112-4.038 0-3.286 2.387-6.307 6.883-6.307 3.614 0 6.424 2.576 6.424 6.017 0 3.59-2.263 6.479-5.404 6.479-1.056 0-2.049-.549-2.39-1.197l-.65 2.425c-.235.904-.87 2.037-1.295 2.727.976.302 2.01.466 3.08.466 5.523 0 10-4.477 10-10S21.523 6 16 6z" fill="white"/></svg>
+        <span>EntryGlobe<strong>PinApp</strong></span>
+      </a>
+      <p>AI-powered Pinterest product discovery for the modern pinner.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#products">Browse</a>
+        <a href="#get-started">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://pinterest.com" target="_blank" rel="noopener">Pinterest</a>
+        <a href="mailto:entryglobe@gmail.com">Email Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 EntryGlobe PinApp. All rights reserved. Not affiliated with Pinterest, Inc.</p>
+    <p>This application uses the Pinterest API in accordance with <a href="https://developers.pinterest.com/terms/" target="_blank" rel="noopener">Pinterest API Terms</a>.</p>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Mobile menu
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  // Category filter
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      document.querySelectorAll('.pin-card').forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = '';
+          card.classList.add('fade-in');
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Save button
+  document.querySelectorAll('.save-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      btn.textContent = '✅ Saved!';
+      btn.style.background = '#00a36c';
+      setTimeout(() => { btn.textContent = '📌 Save'; btn.style.background = ''; }, 2000);
+    });
+  });
+
+  function loadMore() {
+    alert('Sign up for free to load more products!');
+  }
+
+  function handleSignup(e) {
+    e.preventDefault();
+    const email = e.target.querySelector('input').value;
+    e.target.innerHTML = '<p style="color:#fff;font-size:1.1rem;">🎉 You\'re on the list! Check ' + email + ' for your invite.</p>';
+  }
+</script>
+</body>
+</html>
